@@ -7,7 +7,8 @@ app.get('/', function (req, res) {
                 status:'online',
                 author:'wiz64',
                 github:'https://github.com/wiz64/Sinfo'})
- })
+ });
 app.use(routes);
 app.use(auth)
+app.use('/*',express.static('public_html'))
  var server = app.listen(8000)
