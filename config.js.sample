@@ -1,3 +1,0 @@
-const mongo_url = "mongodb+srv://something-blah-blah.mongodb.net/?retryWrites=true&w=majority";
-
-module.exports.mongo_url = mongo_url;

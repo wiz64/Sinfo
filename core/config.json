@@ -1,0 +1,17 @@
+{
+  "APP_ENV": "Devlopment",
+
+  "JWT_SECRET_TOKEN": " json web token",
+  "APP_SECRET_KEY": "randome(16)",
+  "APP_SECRET_PHRASE": "",
+  "SERVER_PORT": "",
+
+  "DB_URL": "http://localhost",
+
+  "SMTP_SERVER": "nodemaler| sendgrid",
+  "MAIL_API_KEY": "",
+  "MAIL_API_SECRET": "",
+
+  "FASTSMS_API_KEY": "",
+  "SMS_TYPE": "OTP"
+}
