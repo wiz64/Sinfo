@@ -1,4 +1,5 @@
 var users = [];
+const db = require('./db.js');
 class User {
     constructor(name,username,email,password) {
         // sanitize and take it
@@ -10,7 +11,7 @@ class User {
     register() {
         console.log(`Registering New User \n name : ${this.name} \n username : ${this.username} \n email : ${this.email} \n password_hashlength : ${this.password.length} \n `);
         // todo : store hashed
-        users[this.username] = this;
+        db.createUser(this.name,this.username,this.email,this.password);
     }
 };
 
@@ -19,15 +20,16 @@ class Login {
         this.username = username;
         this.password = password;
         }
-    verify() {
+    async verify() {
         console.log(`Verifying Login for ${this.username}`)
-        if(!users[this.username]) {
+        if(! await db.existsAccount(this.username)) {
             console.log(`${this.username} doesn't exist`);
-            return(403);
+            return false;
         } else {
             console.log(`${this.username} exists`);
             // todo : hash compare passwords
-            if(this.password == users[this.username].password) {
+            var password_hash = (await db.getAccount(this.username)).password;
+            if(this.password == password_hash) {
                 console.log("Password matched, creating token")
             } else {console.log(`Failed login attempt : ${this.username}`)}
         }

@@ -11,4 +11,5 @@ app.get('/', function (req, res) {
 app.use(routes);
 app.use(auth)
 app.use('/*',express.static('public_html'))
+console.log("----- Starting -----")
  var server = app.listen(8000)
