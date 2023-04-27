@@ -1,12 +1,12 @@
 {
   "APP_ENV": "Devlopment",
 
-  "JWT_SECRET_TOKEN": " json web token",
+  "JWT_SECRET_TOKEN": "randome_token",
   "APP_SECRET_KEY": "randome(16)",
-  "APP_SECRET_PHRASE": "",
+  "APP_SECRET_PHRASE": "enjoys.secret",
   "SERVER_PORT": "",
 
-  "DB_URL": "http://localhost",
+  "DB_URL": "mongodb+srv://mullayam06:Mullayam@cluster0.68i99bx.mongodb.net/sinfo",
 
   "SMTP_SERVER": "nodemaler| sendgrid",
   "MAIL_API_KEY": "",
